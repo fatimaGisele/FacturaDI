@@ -12,6 +12,7 @@ public class Item {
         this.cantidad = cantidad;
         this.producto = producto;
     }
+    
     public int getCantidad() {
         return cantidad;
     }
@@ -25,5 +26,7 @@ public class Item {
         this.producto = producto;
     }
 
-    
+    public double getMonto(){
+        return cantidad * producto.getPrecio();
+    }
 }

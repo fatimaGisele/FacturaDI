@@ -15,7 +15,7 @@ public class Factura {
     private int numeroFactura;
     @Autowired
     private List<Item> Items;
-    private double total;
+    
 
     public Cliente getCliente() {
         return cliente;
@@ -37,11 +37,10 @@ public class Factura {
     }
 
     public double getTotal() {
-    return total;
+        double total = this.Items.stream().map(item -> item.getMonto()).reduce(0.0,(sum, monto)->sum+monto);
+        return total;
     }
-    public void setTotal(double total) {
-    this.total = total;
-    }
+ 
 
 
     

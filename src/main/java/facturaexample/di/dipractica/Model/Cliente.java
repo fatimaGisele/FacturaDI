@@ -12,6 +12,8 @@ public class Cliente {
     private String apellido;
 
     
+    public Cliente() {}
+
     public Cliente(String nombre, String apellido) {
         this.nombre = nombre;
         this.apellido = apellido;
